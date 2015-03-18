@@ -1,0 +1,10 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "TPL and async/await code samples";
+}
+
+<p>Output: @(ViewBag.Output ?? "n/a")</p>
+
+<p>@Html.ActionLink("Deadlock", "Index", "Deadlock")</p>
+<p>@Html.ActionLink("Deadlock Fixed", "Index", "DeadlockFixed")</p>

@@ -1,0 +1,9 @@
+/Mvc/bin
+/Mvc/obj
+/Visual Studio*
+/MetricResults*
+/*.suo
+/*.DotSettings.user
+*.swp
+/Resharper*
+/packages/
