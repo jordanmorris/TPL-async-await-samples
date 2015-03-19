@@ -14,11 +14,9 @@ namespace Mvc.Tests
             var controller = new DeadLockController();
 
             //act
-            var actionResult = controller.Index() as RedirectToRouteResult;
+            var actionResult = (RedirectToRouteResult)controller.Index();
 
             //assert
-            // ReSharper disable once PossibleNullReferenceException
-            // justification: a null reference is a legit way for this test to fail
             Assert.That(actionResult.RouteValues["Output"], Is.EqualTo("Success"));
         }
     }
