@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace Mvc.Controllers
 {
-    public class AynscNotParallelController : Controller
+    public class AynscConcurrentController : Controller
     {
         // GET: /Index/
         public async Task<ActionResult> Index()
@@ -24,7 +24,11 @@ namespace Mvc.Controllers
 
         private async Task DoSomethingAsync()
         {
-            await Task.Delay(1);
+            await Task.Delay(1)
+                // *** difference ***
+                      .ConfigureAwait(continueOnCapturedContext: false);
+            //Lets go of context here
+            
             Thread.Sleep(1000);
         }
 

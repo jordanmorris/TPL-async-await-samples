@@ -130,8 +130,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AynscParallelController.cs" />
-    <Compile Include="Controllers\AynscNotParallelController.cs" />
+    <Compile Include="Controllers\AynscConcurrentController.cs" />
+    <Compile Include="Controllers\AynscNotConcurrentController.cs" />
     <Compile Include="Controllers\SuccessfulContextAccess.cs" />
     <Compile Include="Controllers\FailEarlyFailLoudlyController.cs" />
     <Compile Include="Controllers\DeadLockFixedController.cs" />
