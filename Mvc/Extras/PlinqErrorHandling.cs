@@ -5,6 +5,10 @@ using System.Threading;
 
 namespace Mvc.Extras
 {
+    /// <summary>
+    /// From MSDN's How to: Handle Exceptions in a PLINQ Query
+    /// https://msdn.microsoft.com/en-us/library/dd460712%28v=vs.110%29.aspx
+    /// </summary>
     public class PlinqErrorHandling
     {
         // Paste into PLINQDataSample class. 

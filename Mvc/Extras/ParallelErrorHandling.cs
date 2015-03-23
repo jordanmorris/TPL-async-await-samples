@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 
 namespace Mvc.Extras
 {
+    /// <summary>
+    /// From MSDN's How to: Handle Exceptions in Parallel Loops
+    /// https://msdn.microsoft.com/en-us/library/dd460695%28v=vs.110%29.aspx
+    /// </summary>
     public class ParallelErrorHandling
     {
         static void Main(string[] args)
