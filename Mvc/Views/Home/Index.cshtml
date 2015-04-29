@@ -7,7 +7,8 @@
 <p>Output: @(ViewBag.Output ?? "n/a")</p>
 
 <p>@Html.ActionLink("Deadlock", "Index", "Deadlock")</p>
-<p>@Html.ActionLink("Deadlock fixed", "Index", "DeadlockFixed")</p>
+<p>@Html.ActionLink("Deadlock fixed using .ConfigureAwait(continueOnCapturedContext: false)", "Index", "DeadLockFixedNoCapture")</p>
+<p>@Html.ActionLink("Deadlock fixed using ThreadPool technique", "Index", "DeadLockFixedThreadPool")</p>
 <p>@Html.ActionLink("Aynsc not so concurrent", "Index", "AynscNotConcurrent")</p>
 <p>@Html.ActionLink("Aynsc concurrent", "Index", "AynscConcurrent")</p>
 <p>@Html.ActionLink("Fail early, fail loudly", "Index", "FailEarlyFailLoudly")</p>

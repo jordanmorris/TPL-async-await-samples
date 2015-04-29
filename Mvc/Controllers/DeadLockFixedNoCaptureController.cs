@@ -3,12 +3,12 @@ using System.Web.Mvc;
 
 namespace Mvc.Controllers
 {
-    public class DeadLockFixedController : Controller
+    public class DeadLockFixedNoCaptureController : Controller
     {
         // GET: /Index/
         public ActionResult Index()
         {
-            Task.Run(() => DoSomethingAsync()).Wait();
+            DoSomethingAsync().Wait();
 
             var output = "Success";
 
@@ -18,6 +18,9 @@ namespace Mvc.Controllers
         private async Task DoSomethingAsync()
         {
             await Task.Delay(1000)
+                //this protects from deadlocks by electing
+                //to continue on the a thread from the ThreadPool
+                //after completing the asynchronous operation
                       .ConfigureAwait(continueOnCapturedContext: false);
         }
 
