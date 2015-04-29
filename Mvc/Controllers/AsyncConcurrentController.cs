@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace Mvc.Controllers
 {
-    public class AynscNotConcurrentController : Controller
+    public class AsyncConcurrentController : Controller
     {
         // GET: /Index/
         public async Task<ActionResult> Index()
@@ -24,7 +24,14 @@ namespace Mvc.Controllers
 
         private async Task DoSomethingAsync()
         {
-            await Task.Delay(1);
+            //When the following command runs, the calling method (Index) will
+            //be able to continue execution.
+            await Task.Delay(1)
+                // *** difference ***
+                      .ConfigureAwait(continueOnCapturedContext: false);
+            //This method did not 'capture' the thread on which it was started,
+            //so it will happily resume on any available thread from TPL's ThreadPool
+            
             Thread.Sleep(1000);
         }
 
