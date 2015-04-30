@@ -6,7 +6,8 @@ namespace Mvc.Extras
     {
         public async void MyButtonClickAsync()
         {
-            await MyButtonActionAsync();
+            await MyButtonActionAsync()
+                .ConfigureAwait(continueOnCapturedContext: false);
         }
 
         public async Task MyButtonActionAsync()
