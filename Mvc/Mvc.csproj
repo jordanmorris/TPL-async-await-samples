@@ -138,6 +138,8 @@
     <Compile Include="Controllers\DeadLockFixedNoCaptureController.cs" />
     <Compile Include="Controllers\DeadLockController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extras\GatekeeperExample.cs" />
+    <Compile Include="Extras\IGatekeeperExample.cs" />
     <Compile Include="Extras\ParallelErrorHandling.cs" />
     <Compile Include="Extras\PlinqErrorHandling.cs" />
     <Compile Include="Global.asax.cs">
