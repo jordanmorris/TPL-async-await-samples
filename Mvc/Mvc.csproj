@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AsyncConcurrentController.cs" />
     <Compile Include="Controllers\AysncNotConcurrentController.cs" />
     <Compile Include="Controllers\DeadLockFixedThreadPoolController.cs" />
+    <Compile Include="Controllers\UseGatekeeperController.cs" />
     <Compile Include="Controllers\SuccessfulContextAccess.cs" />
     <Compile Include="Controllers\FailEarlyFailLoudlyController.cs" />
     <Compile Include="Controllers\DeadLockFixedNoCaptureController.cs" />
