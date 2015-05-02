@@ -13,11 +13,6 @@ namespace Mvc.Controllers
             _gatekeeperExample = gatekeeperExample;
         }
 
-        public UseGatekeeperController()
-            :this(new GatekeeperExample())
-        {
-        }
-
         // GET: /Index/
         public ActionResult Index(int dividend, int divisor)
         {
@@ -33,7 +28,7 @@ namespace Mvc.Controllers
             {
                 #pragma warning disable 618
                 //justification: I have a really, really good reason not to implement
-                //async end-to-end right now
+                //async all the way up right now
                 var quotient = _gatekeeperExample.DivideSlowly(dividend, divisor);
                 #pragma warning restore 618
                 return "Success. Quotient = " + quotient;

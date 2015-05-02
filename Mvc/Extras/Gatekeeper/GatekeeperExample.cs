@@ -47,7 +47,7 @@ namespace Mvc.Extras.Gatekeeper
                 
                 foreach (var e in ae.InnerExceptions)
                 {
-                    //log each of the InnerExceptions
+                    //todo: log each of the InnerExceptions
                 }
 
                 //Throw some regular kind of exception which normal error-handling
