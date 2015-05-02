@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Mvc.Extras
+namespace Mvc.Extras.Gatekeeper
 {
     public class GatekeeperExample : IGatekeeperExample
     {
