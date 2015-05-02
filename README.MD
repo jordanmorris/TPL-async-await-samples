@@ -8,4 +8,5 @@ The versions of the samples in this branch are intended for use when presenting.
 
 The solution requires .Net 4.5 to compile, which you can get for free with Visual Studio Community Edition.
 
-Jordan Morris &nbsp;&nbsp;&nbsp; [@**scalable**notions](https://twitter.com/scalablenotions)
+Jordan Morris  
+[@**scalable**notions](https://twitter.com/scalablenotions)
