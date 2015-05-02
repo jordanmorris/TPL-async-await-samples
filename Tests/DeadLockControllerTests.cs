@@ -2,7 +2,7 @@
 using Mvc.Controllers;
 using NUnit.Framework;
 
-namespace Mvc.Tests
+namespace Tests
 {
     [TestFixture]
     public class DeadLockControllerTests

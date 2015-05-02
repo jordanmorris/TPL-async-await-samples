@@ -1,13 +1,14 @@
 ﻿using System.Threading.Tasks;
 using Mvc.Extras;
-using Xunit;
+using NUnit.Framework;
 
-namespace Mvc.Tests
+namespace Tests
 {
-    public class TestableAsyncEventsXUnitTests
+    [TestFixture]
+    public class TestableAsyncEventsTests
     {
-        [Fact]
-        public async void MyButtonActionAsyncDoesNotCrashWithXUnit()
+        [Test]
+        public async void MyButtonActionAsyncDoesNotCrash()
         {
             //arrange
             var buttonActionTask = new TestableAsyncEvents().MyButtonActionAsync();
@@ -16,7 +17,7 @@ namespace Mvc.Tests
             await buttonActionTask;
 
             //assert
-            Assert.Equal(buttonActionTask.Status, TaskStatus.RanToCompletion);
+            Assert.That(buttonActionTask.Status, Is.EqualTo(TaskStatus.RanToCompletion));
         }
     }
 }
