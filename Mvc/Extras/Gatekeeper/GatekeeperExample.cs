@@ -37,15 +37,15 @@ namespace Mvc.Extras.Gatekeeper
                 //Flatten the InnerExceptions, so you don't need to loop through
                 //them recursively (some of the inner exceptions may themselves be
                 //AggregateExceptions)
-                ae.Flatten();
+                var flattenedAe = ae.Flatten();
 
                 //re-throw any exception which may be handled specifically by the client
-                foreach (var e in ae.InnerExceptions)
+                foreach (var e in flattenedAe.InnerExceptions)
                 {
                     if (e is DivideByZeroException) throw e;
                 }
-                
-                foreach (var e in ae.InnerExceptions)
+
+                foreach (var e in flattenedAe.InnerExceptions)
                 {
                     //todo: log each of the InnerExceptions
                 }

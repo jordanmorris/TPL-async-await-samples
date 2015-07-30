@@ -3,7 +3,7 @@
 /Visual Studio*
 /MetricResults*
 /*.suo
-/*.DotSettings.user
+*.user
 *.swp
 /Resharper*
 /packages/
