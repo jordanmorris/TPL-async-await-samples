@@ -24,7 +24,7 @@ namespace Mvc.Extras.Gatekeeper
         /// <returns></returns>
         [Obsolete("Wherever possible, use DivideSlowlyAsync and refactor for " +
                   "end-to-end asynchronicity. Otherwise, if you must have " +
-                  "partially asnyc code, use this Gate-keeper Method convert.")]
+                  "partially asnyc code, use this Gate-keeper Method to convert.")]
         public int DivideSlowly(int dividend, int divisor)
         {
             try
